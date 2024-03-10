@@ -1,0 +1,12 @@
+<div>
+  <button (click)="restarConteo()">-</button>
+  <button (click)="sumarConteo()">+</button>
+  <p>Contador con valor: {{ conteo }}</p>
+</div>
+<div>
+  <app-noticia
+    *ngFor="let elemento of noticias"
+    [noticia]="elemento"
+    [encabezado]="elemento.titulo"
+  ></app-noticia>
+</div>

@@ -1,0 +1,12 @@
+<div *ngIf="noticia">
+  <h2>{{ encabezado }}</h2>
+  <a href="{{ noticia.enlace }}">
+    <img src="{{ noticia.imagen.src }}" alt="{{ noticia.imagen.alt }}" />
+    <h3>{{ noticia.titulo }}</h3>
+    <p *ngIf="noticia.destacado">{{ noticia.descripcion }}</p>
+    <span>Fecha: {{ noticia.fecha.toLocaleDateString() }}</span>
+  </a>
+</div>
+<div *ngIf="!noticia">
+  <p>No se encontro informacion para esta noticia</p>
+</div>
